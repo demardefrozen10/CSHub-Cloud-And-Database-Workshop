@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from fastapi import HTTPException
-import json
 import oracledb
 
 from DBConnection.connect import get_connection
