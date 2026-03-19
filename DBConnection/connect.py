@@ -5,11 +5,11 @@ import oracledb
 
 def get_connection() -> oracledb.Connection:
     return oracledb.connect(
-        user=os.getenv("ORACLE_USER", "chud"),
-        password=os.getenv("ORACLE_PASSWORD", "test123"),
-        host=os.getenv("ORACLE_HOST", "172.202.113.49"),
-        port=int(os.getenv("ORACLE_PORT", "1521")),
-        service_name=os.getenv("ORACLE_SERVICE", "MYPDB"),
+        user=os.getenv("ORACLE_USER", ""),
+        password=os.getenv("ORACLE_PASSWORD", ""),
+        host=os.getenv("ORACLE_HOST", ""),
+        port=int(os.getenv("ORACLE_PORT", "")),
+        service_name=os.getenv("ORACLE_SERVICE", ""),
     )
 
 
