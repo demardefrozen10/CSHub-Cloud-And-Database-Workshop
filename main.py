@@ -15,7 +15,7 @@ def health_check():
 
 @app.get("/get-responses")
 def get_responses():
-    select_sql = "SELECT name, year_of_study, interests, what_you_like_about_cshub FROM STUDENTS"
+    select_sql = "SELECT name, email, message FROM STUDENTS"
 
     try:
         with get_connection() as conn:
@@ -54,10 +54,8 @@ def submit_form(payload: SubmitFormRequest):
                     insert_sql,
                     {
                         "name": payload.name,
-                        "year_of_study": payload.year_of_study,
-                        "major": payload.major,
-                        "interests": payload.interests,
-                        "what_you_like_about_cshub": payload.what_you_like_about_cshub,
+                        "email": payload.email,
+                        "message": payload.Message,
                     },
                 )
             conn.commit()
