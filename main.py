@@ -10,7 +10,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://cshub.workshop.mexicocentral.cloudapp.azure.com:3000"],
+    allow_origins=["https://cshub.workshop.mexicocentral.cloudapp.azure.com:3000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
