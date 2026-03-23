@@ -33,17 +33,14 @@ def submit_form(payload: SubmitFormRequest):
     insert_sql = """
         INSERT INTO STUDENTS (
             NAME,
-            YEAR_OF_STUDY,
-            MAJOR,
-            INTERESTS,
-            WHAT_YOU_LIKE_ABOUT_CSHUB
+            EMAIL,
+            MESSAGE,
+
         )
         VALUES (
             :name,
-            :year_of_study,
-            :major,
-            :interests,
-            :what_you_like_about_cshub
+            :email,
+            :message
         )
     """
 
